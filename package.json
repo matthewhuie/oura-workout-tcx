@@ -1,0 +1,26 @@
+{
+  "name": "oura-workout-tcx",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/matthewhuie/oura-workout-tcx#readme",
+  "bugs": {
+    "url": "https://github.com/matthewhuie/oura-workout-tcx/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewhuie/oura-workout-tcx.git"
+  },
+  "license": "ISC",
+  "author": "Matthew Huie <matthew@matthewhuie.com>",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^8.1.0",
+    "axios": "^1.13.2",
+    "xmlbuilder2": "^4.0.3"
+  }
+}
