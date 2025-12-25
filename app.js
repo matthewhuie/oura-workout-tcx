@@ -10,11 +10,17 @@ const OURA_BASE_URL = 'https://api.ouraring.com/v2/usercollection';
  */
 async function run() {
   try {
-    // 1. Prompt for OAuth Token
-    const token = await password({
-      message: 'Enter your Oura OAuth token (or Personal Access Token):',
-      mask: '*'
-    });
+    // 1. Check for environment variable, otherwise prompt
+    let token = process.env.OURA_OAUTH_TOKEN;
+
+    if (token) {
+      console.log('✅ Using OAuth token from environment variable (OURA_OAUTH_TOKEN).');
+    } else {
+      token = await password({
+        message: 'Enter your Oura OAuth token (or Personal Access Token):',
+        mask: '*'
+      });
+    }
 
     const authHeaders = { Authorization: `Bearer ${token}` };
 
